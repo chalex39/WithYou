@@ -7,26 +7,103 @@
 
 const messages = [
 
-    "You are doing better than you think.",
+"You are doing better than you think",
 
-    "I'm proud of you.",
+    "I'm so proud of you",
 
-    "You deserve a little break.",
+    "You deserve a little break",
 
-    "Take a deep breath. You've got this.",
+    "You got this babyyy",
 
-    "You are more capable than you realize.",
+    "You are more capable than you realize",
 
-    "You are enough.",
+    "You are my favorite person in the whole world",
 
-    "Someone is always rooting for you.",
+    "I'm always rooting for you",
 
-    "You make the world a little brighter.",
+    "You make my world a little brighter",
 
-    "It's okay to take things one step at a time.",
+    "It's okay to take things one step at a time",
 
-    "I hope today is gentle with you."
+    "I hope today is gentle with you"
 
+   "도마가 보고싶데요"
+
+"째니 물"
+
+"째니 발"
+
+"째니 얼음물"
+
+
+"I believe in you and your ability to figure things out"
+"You don’t have to be perfect to be proud of yourself"
+"Your effort matters, even when it feels small"
+"You are worthy of love and patience"
+"Keep going, you’re closer than you know"
+"I’m proud of how hard you’re trying"
+"Take a breath, you’ve got this"
+"You deserve kindness, especially from yourself"
+"You are not alone, I’m here for you"
+"One step at a time is still progress"
+"Your heart is strong and your future is bright"
+"You can handle whatever comes next"
+"Trust yourself, you’ve made it through before"
+"I see your strength, even on tough days"
+"Let today be gentle with you"
+"You are making a difference, even if it’s not obvious yet"
+"Your growth is real and it counts"
+"I’m cheering for you"
+"Your best is enough, right now"
+"You are doing meaningful work, even quietly"
+"I love seeing you try"
+"You bring light wherever you go"
+"Give yourself credit for surviving and continuing"
+"You can rest and still be strong"
+"I’m grateful for you"
+"Your dreams are worth protecting"
+"Be proud of the progress you’ve made"
+"Slow is smooth, and smooth is winning"
+"I believe you will find your way"
+"You deserve good things"
+"Your future self is rooting for you"
+"You’re allowed to have good days and messy days"
+"Keep your head up, I’m with you"
+"You have more resources than you think"
+"Even hard moments pass"
+"Your confidence will grow as you go"
+"You’re allowed to change your mind and try again"
+"I’m proud of you for showing up"
+"Let your kindness be your compass"
+"You are valued, today and always"
+"You’re safe to take things one step at a time"
+"You’re allowed to feel, and still move forward"
+"I’m proud of your heart and your courage"
+"Today will get lighter"
+"You can do this, and I’m here to remind you"
+"I adore you more than words can hold"
+"My favorite place is wherever you are"
+"I’m so lucky to love you"
+"You make my heart feel at home"
+"I fall for you more every time I see you"
+"Every day with you feels like a gift"
+"I want to choose you, again and again"
+"Your smile makes my world softer"
+"I’m thinking of you, and it’s the sweetest distraction"
+"I can’t wait to be close to you again"
+"I love the way you make everything feel better"
+"You mean everything to me"
+"Your love calms me and strengthens me"
+"I’m yours, in the best way"
+"Let me hold you in all the moments you need"
+"Being with you is my kind of happiness"
+"You are my favorite thought"
+"I want to grow old with you, in whatever way life allows"
+"Your presence is my comfort"
+"I love you, and I’m not going anywhere"
+"You make my heart race and my mind rest"
+"I’m proud of you, and I’m also proud to be yours"
+"I feel lucky that we found each other"
 ];
 
 
