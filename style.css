@@ -1,0 +1,1022 @@
+/* ==================================================
+   SECTION 1: COLOR VARIABLES
+   ================================================== */
+
+:root {
+
+    --background-color: #fff1f5;
+
+    --background-glow: #ffe3eb;
+
+    --squishy-light: #fff8fa;
+
+    --squishy-main: #f5c6d5;
+
+    --squishy-dark: #e5a6b9;
+
+    --squishy-glow:
+        rgba(245, 198, 213, 0.30);
+
+    --text-color: #4a403d;
+
+    --secondary-text: #a99b96;
+
+}
+
+
+/* ==================================================
+   SECTION 2: BASIC RESET
+   ================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        var(--background-color);
+
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    height: 100dvh;
+
+    overflow: hidden;
+
+    background:
+        var(--background-color);
+
+    color:
+        var(--text-color);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    touch-action: none;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    /*
+       This lets the background itself extend
+       underneath the iPhone status bar.
+    */
+
+    transition:
+        background 0.9s ease;
+
+}
+
+
+/* ==================================================
+   SECTION 3: FULL SCREEN PAGE
+
+   THIS IS THE IMPORTANT CHANGE.
+
+   The entire interface is centered using flexbox
+   rather than being positioned from the top.
+
+   Safe-area padding is symmetrical so the content
+   remains visually centered on iPhones.
+   ================================================== */
+
+.page {
+
+    width: 100%;
+
+    height: 100%;
+
+    height: 100dvh;
+
+    /*
+       Keep the page itself behind the status bar.
+    */
+
+    padding-top:
+        env(safe-area-inset-top);
+
+    padding-right:
+        env(safe-area-inset-right);
+
+    padding-bottom:
+        env(safe-area-inset-bottom);
+
+    padding-left:
+        env(safe-area-inset-left);
+
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+
+    overflow:
+        hidden;
+
+}
+
+
+/* ==================================================
+   SECTION 4: CENTERED CONTENT
+
+   Everything inside this container is treated as
+   one group and centered vertically.
+   ================================================== */
+
+.content {
+
+    width:
+        100%;
+
+    max-width:
+        600px;
+
+    padding:
+        25px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+}
+
+
+/* ==================================================
+   SECTION 5: INTRODUCTION
+   ================================================== */
+
+.subtitle {
+
+    margin:
+        0
+        0
+        14px
+        0;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--secondary-text);
+
+    transition:
+        color 0.9s ease;
+
+}
+
+
+/* ==================================================
+   SECTION 6: ENCOURAGEMENT MESSAGE
+   ================================================== */
+
+#message {
+
+    margin:
+        0;
+
+    max-width:
+        500px;
+
+    font-size:
+        clamp(
+            25px,
+            7vw,
+            42px
+        );
+
+    line-height:
+        1.15;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        -0.035em;
+
+    color:
+        var(--text-color);
+
+    transition:
+        color 0.9s ease,
+        opacity 0.18s ease;
+
+}
+
+
+/* ==================================================
+   SECTION 7: SQUISHY AREA
+
+   This area has a fixed visual size so the entire
+   group remains centered consistently.
+   ================================================== */
+
+.squishy-area {
+
+    width:
+        100%;
+
+    height:
+        310px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    position:
+        relative;
+
+    flex-shrink:
+        0;
+
+}
+
+
+/* ==================================================
+   SECTION 8: SQUISHY
+   ================================================== */
+
+.squishy {
+
+    width:
+        190px;
+
+    height:
+        190px;
+
+    position:
+        relative;
+
+    border-radius:
+        46% 54% 51% 49%
+        /
+        49% 46% 54% 51%;
+
+    background:
+        radial-gradient(
+            circle at 34% 25%,
+            var(--squishy-light) 0%,
+            var(--squishy-main) 38%,
+            var(--squishy-dark) 100%
+        );
+
+    box-shadow:
+
+        0 24px 34px
+        rgba(
+            100,
+            70,
+            70,
+            0.13
+        ),
+
+        0 0 45px
+        var(--squishy-glow),
+
+        inset
+        13px 13px 22px
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        ),
+
+        inset
+        -14px -15px 22px
+        rgba(
+            150,
+            90,
+            100,
+            0.12
+        );
+
+    transform:
+        translate3d(
+            0,
+            0,
+            0
+        )
+        scale(1)
+        rotate(0deg);
+
+    transform-origin:
+        center center;
+
+    touch-action:
+        none;
+
+    cursor:
+        grab;
+
+    user-select:
+        none;
+
+    -webkit-user-select:
+        none;
+
+    will-change:
+        transform,
+        border-radius;
+
+    transition:
+        background 0.65s ease,
+        box-shadow 0.65s ease;
+
+}
+
+
+/* ==================================================
+   SECTION 9: SQUISHY HIGHLIGHT
+   ================================================== */
+
+.squishy-highlight {
+
+    position:
+        absolute;
+
+    width:
+        58px;
+
+    height:
+        30px;
+
+    top:
+        23px;
+
+    left:
+        31px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.52
+        );
+
+    transform:
+        rotate(-25deg);
+
+    filter:
+        blur(2px);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==================================================
+   SECTION 10: SMALL HIGHLIGHT
+   ================================================== */
+
+.squishy-highlight-small {
+
+    position:
+        absolute;
+
+    width:
+        24px;
+
+    height:
+        13px;
+
+    top:
+        55px;
+
+    left:
+        55px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.27
+        );
+
+    filter:
+        blur(3px);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ==================================================
+   SECTION 11: GLOW
+   ================================================== */
+
+.squishy-area::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        240px;
+
+    height:
+        240px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--squishy-glow);
+
+    filter:
+        blur(45px);
+
+    opacity:
+        0.7;
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+
+    transition:
+        background 0.65s ease;
+
+}
+
+
+/* ==================================================
+   SECTION 12: INSTRUCTION
+   ================================================== */
+
+.instruction {
+
+    margin:
+        -8px
+        0
+        0
+        0;
+
+    font-size:
+        14px;
+
+    color:
+        var(--secondary-text);
+
+    letter-spacing:
+        0.04em;
+
+    transition:
+        color 0.9s ease,
+        opacity 0.25s ease;
+
+}
+
+
+/* ==================================================
+   SECTION 13: HEART BUTTON
+   ================================================== */
+
+.heart-button {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    margin-top:
+        10px;
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    outline:
+        none;
+
+    background:
+        transparent;
+
+    appearance:
+        none;
+
+    -webkit-appearance:
+        none;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    touch-action:
+        manipulation;
+
+}
+
+
+/* ==================================================
+   SECTION 14: HEART
+   ================================================== */
+
+.heart-shape {
+
+    display:
+        block;
+
+    font-size:
+        36px;
+
+    line-height:
+        1;
+
+    color:
+        var(--squishy-dark);
+
+    border:
+        none;
+
+    text-shadow:
+        0 5px 11px
+        rgba(
+            120,
+            70,
+            80,
+            0.11
+        );
+
+    transition:
+        color 0.65s ease,
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+}
+
+
+.heart-button:active
+.heart-shape {
+
+    transform:
+        scale(0.86);
+
+}
+
+
+/* ==================================================
+   SECTION 15: MESSAGE OVERLAY
+   ================================================== */
+
+.message-overlay {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        100;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        40px;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    background:
+        rgba(
+            255,
+            250,
+            248,
+            0.18
+        );
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+
+}
+
+
+.message-overlay.open {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+
+}
+
+
+/* ==================================================
+   SECTION 16: FLOATING MESSAGE
+   ================================================== */
+
+.floating-message {
+
+    max-width:
+        520px;
+
+    text-align:
+        center;
+
+    background:
+        transparent;
+
+    padding:
+        20px;
+
+    transform:
+        translateY(15px)
+        scale(0.96);
+
+    opacity:
+        0;
+
+    transition:
+        transform 0.55s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+
+        opacity 0.45s ease;
+
+}
+
+
+.message-overlay.open
+.floating-message {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity:
+        1;
+
+}
+
+
+.floating-message p {
+
+    margin:
+        0;
+
+    font-size:
+        clamp(
+            28px,
+            8vw,
+            52px
+        );
+
+    line-height:
+        1.25;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        -0.025em;
+
+    color:
+        rgba(
+            70,
+            58,
+            56,
+            0.92
+        );
+
+    text-shadow:
+        0 2px 18px
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+}
+
+
+/* ==================================================
+   SECTION 17: CLOSE BUTTON
+   ================================================== */
+
+.close-button {
+
+    position:
+        absolute;
+
+    top:
+        calc(
+            env(safe-area-inset-top)
+            + 22px
+        );
+
+    right:
+        calc(
+            env(safe-area-inset-right)
+            + 22px
+        );
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    outline:
+        none;
+
+    background:
+        transparent;
+
+    appearance:
+        none;
+
+    -webkit-appearance:
+        none;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    font-size:
+        35px;
+
+    font-weight:
+        200;
+
+    line-height:
+        1;
+
+    color:
+        rgba(
+            70,
+            58,
+            56,
+            0.65
+        );
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.close-button:active {
+
+    transform:
+        scale(0.82);
+
+}
+
+
+/* ==================================================
+   SECTION 18: SMALL PHONE ADJUSTMENT
+   ==================================================
+
+   On shorter iPhones, slightly reduce the squishy
+   area so the entire group can still fit while
+   remaining centered.
+   ================================================== */
+
+@media (max-height: 700px) {
+
+    .content {
+
+        padding:
+            15px;
+
+    }
+
+
+    .subtitle {
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .squishy-area {
+
+        height:
+            260px;
+
+    }
+
+
+    .squishy {
+
+        width:
+            165px;
+
+        height:
+            165px;
+
+    }
+
+
+    .squishy-area::before {
+
+        width:
+            210px;
+
+        height:
+            210px;
+
+    }
+
+
+    .heart-button {
+
+        margin-top:
+            5px;
+
+    }
+
+}
+
+
+/* ==================================================
+   SECTION 19: VERY SHORT SCREENS
+   ================================================== */
+
+@media (max-height: 600px) {
+
+    .squishy-area {
+
+        height:
+            215px;
+
+    }
+
+
+    .squishy {
+
+        width:
+            145px;
+
+        height:
+            145px;
+
+    }
+
+
+    .squishy-highlight {
+
+        transform:
+            scale(0.8)
+            rotate(-25deg);
+
+        transform-origin:
+            top left;
+
+    }
+
+
+    .squishy-highlight-small {
+
+        transform:
+            scale(0.8);
+
+        transform-origin:
+            top left;
+
+    }
+
+}
+
+
+/* ==================================================
+   SECTION 20: REDUCED MOTION
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        transition-duration:
+            0.5s !important;
+
+    }
+
+}
