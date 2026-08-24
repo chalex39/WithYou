@@ -106,7 +106,7 @@ const messages = [
 
     "Put your shoulders down. Take a breath.",
 
-    "You've got this, sweetheart.",
+    "You've got this my baby.",
 
     "I hope something makes you smile today.",
 
@@ -119,8 +119,6 @@ const messages = [
     "There is no need to rush.",
 
     "I'm glad you exist.",
-
-    "You deserve tenderness too.",
 
     "Keep going at your own pace.",
 
@@ -141,12 +139,85 @@ const messages = [
 
     "째니 발",
 
-    "Doma and I both got your back"
+   "째니 얼음물",
 
-   "바보 똥쟁이"
+    "째니 발",
 
-"엉덩이 그만 만져요"
+    "Doma and I both got your back",
 
+   "바보 똥쟁이",
+
+"엉덩이 그만 만져요",
+
+"째니 보고싶어요",
+
+"사랑해요 애기",
+
+"누나 언제 돌아와요",
+
+   "째니 얼음물",
+
+    "째니 발",
+
+   "째니 얼음물",
+
+    "째니 발",
+
+    "Doma and I both got your back",
+
+   "바보 똥쟁이",
+
+"엉덩이 그만 만져요",
+
+"째니 보고싶어요",
+
+"사랑해요 애기",
+
+"누나 언제 돌아와요",
+
+"도마가 보고싶데요",
+
+       "째니 얼음물",
+
+    "째니 발",
+
+   "째니 얼음물",
+
+    "째니 발",
+
+    "Doma and I both got your back",
+
+   "바보 똥쟁이",
+
+"엉덩이 그만 만져요",
+
+"째니 보고싶어요",
+
+"사랑해요 애기",
+
+"누나 언제 돌아와요",
+
+   "째니 얼음물",
+
+    "째니 발",
+
+   "째니 얼음물",
+
+    "째니 발",
+
+    "Doma and I both got your back",
+
+   "바보 똥쟁이",
+
+"엉덩이 그만 만져요",
+
+"째니 보고싶어요",
+
+"사랑해요 애기",
+
+"누나 언제 돌아와요",
+
+"도마가 보고싶데요",
 ];
 
 
