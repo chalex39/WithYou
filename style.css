@@ -710,35 +710,55 @@ body {
 .floating-message {
 
     /*
-       Keeps the letter from becoming too wide.
+       Use almost the entire available width
+       while keeping comfortable margins.
     */
 
     width:
         min(
-            100%,
-            520px
+            calc(100vw - 40px),
+            540px
         );
 
 
     /*
-       Prevents the letter from being taller than
-       the phone screen.
+       Give the letter much more vertical space.
     */
 
     max-height:
-        75vh;
+        calc(
+            100dvh -
+            env(safe-area-inset-top) -
+            env(safe-area-inset-bottom) -
+            60px
+        );
 
 
     /*
-       If the letter is longer than the available
-       space, it can be gently scrolled.
+       If the letter is still longer than the
+       available screen, the user can scroll it.
     */
 
     overflow-y:
         auto;
 
+    overflow-x:
+        hidden;
+
     -webkit-overflow-scrolling:
         touch;
+
+
+    /*
+       Hide the scrollbar so it still looks like
+       floating text rather than a text box.
+    */
+
+    scrollbar-width:
+        none;
+
+    -ms-overflow-style:
+        none;
 
 
     text-align:
@@ -749,8 +769,7 @@ body {
 
 
     /*
-       Small horizontal padding so the text has
-       breathing room without creating a box.
+       Give the text some breathing room.
     */
 
     padding:
@@ -762,7 +781,7 @@ body {
         scale(0.96);
 
     opacity:
-        1;
+        0;
 
 
     transition:
@@ -778,30 +797,52 @@ body {
 
 }
 
+
+/*
+   Hide scrollbar on Chrome / Safari / iPhone.
+*/
+
+.floating-message::-webkit-scrollbar {
+
+    display:
+        none;
+
+}
+
 .floating-message p {
 
-    margin: 0;
+    margin:
+        0;
+
 
     /*
-       Smaller font so the full letter can fit
-       comfortably on a phone screen.
+       Slightly smaller text allows considerably
+       more of the letter to fit on screen.
     */
 
     font-size:
         clamp(
-            15px,
-            4.1vw,
-            20px
+            14px,
+            3.8vw,
+            19px
         );
+
+
+    /*
+       Comfortable spacing between lines.
+    */
 
     line-height:
         1.55;
 
+
     font-weight:
         400;
 
+
     letter-spacing:
         -0.01em;
+
 
     color:
         rgba(
@@ -811,21 +852,31 @@ body {
             0.92
         );
 
+
+    /*
+       LEFT alignment makes a long personal letter
+       substantially easier to read.
+    */
+
     text-align:
         left;
 
+
     /*
-       Allows long words/lines to wrap naturally.
+       Make sure long words never push the text
+       outside the screen.
     */
 
     overflow-wrap:
         break-word;
 
-    word-wrap:
-        break-word;
+    word-break:
+        normal;
+
 
     /*
-       Soft text appearance.
+       Soft appearance without creating a visible
+       text box.
     */
 
     text-shadow:
