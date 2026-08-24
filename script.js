@@ -604,7 +604,7 @@ squishy.addEventListener(
 
 
         instruction.textContent =
-            "Relax";
+            "Take time to Relax";
 
     }
 );
