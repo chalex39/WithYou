@@ -1,8 +1,10 @@
 /* ==================================================
    SECTION 1: CUSTOM MESSAGES
 
-   Edit this list whenever you want to change
-   the messages displayed on the website.
+   Add, remove, or replace messages here.
+
+   The website randomly chooses one whenever
+   a new message is needed.
    ================================================== */
 
 const messages = [
@@ -25,7 +27,123 @@ const messages = [
 
     "It's okay to take things one step at a time.",
 
-    "I hope today is gentle with you."
+    "I hope today is gentle with you.",
+
+
+    /* ==================================================
+       ADDITIONAL AFFECTIONATE & ENCOURAGING MESSAGES
+       ================================================== */
+
+    "You are doing such a good job.",
+
+    "I'm always cheering for you.",
+
+    "You don't have to have everything figured out.",
+
+    "You deserve kindness, especially from yourself.",
+
+    "You're allowed to rest.",
+
+    "You're allowed to take your time.",
+
+    "I'm so happy you're here.",
+
+    "You make things better just by being you.",
+
+    "You are more loved than you know.",
+
+    "You deserve all the good things coming your way.",
+
+    "You can do this. I believe in you.",
+
+    "One little step at a time, okay?",
+
+    "You're doing enough. You really are.",
+
+    "I'm rooting for you every step of the way.",
+
+    "You deserve a warm hug today.",
+
+    "Please remember to be gentle with yourself.",
+
+    "You have made it through difficult days before.",
+
+    "This moment will pass. Stay with it.",
+
+    "You are stronger than you give yourself credit for.",
+
+    "You have so many good things ahead of you.",
+
+    "It's okay if today isn't perfect.",
+
+    "You don't need to be perfect to be wonderful.",
+
+    "You deserve to feel proud of yourself.",
+
+    "I hope you know how special you are.",
+
+    "You bring something to this world that nobody else can.",
+
+    "You're doing great. Keep going.",
+
+    "I'm sending you a little bit of love.",
+
+    "Take care of yourself for me.",
+
+    "You deserve some peace today.",
+
+    "You can slow down. Nothing is chasing you.",
+
+    "You are worth taking care of.",
+
+    "You're allowed to have bad days.",
+
+    "Even when you don't feel strong, you're still moving forward.",
+
+    "I'm proud of how far you've come.",
+
+    "You don't have to carry everything at once.",
+
+    "Put your shoulders down. Take a breath.",
+
+    "You've got this, sweetheart.",
+
+    "I hope something makes you smile today.",
+
+    "You deserve to feel safe and cared for.",
+
+    "You're doing better than you realize.",
+
+    "It's okay. Just breathe for a moment.",
+
+    "You are never a burden for needing a little care.",
+
+    "There is no need to rush.",
+
+    "I'm glad you exist.",
+
+    "You deserve tenderness too.",
+
+    "Keep going at your own pace.",
+
+    "You are precious to the people who care about you.",
+
+    "I believe in you, even on the days you don't.",
+
+    "You can take a little break. I'll be right here.",
+
+    "You deserve a peaceful moment.",
+
+
+    /* ==================================================
+       YOUR PERSONAL MESSAGES
+       ================================================== */
+
+    "째니 얼음물",
+
+    "째니 발",
+
+    "Doma and I both got your back"
 
 ];
 
