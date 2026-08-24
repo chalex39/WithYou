@@ -702,41 +702,50 @@ body {
 }
 
 
-/* ==================================================
-   SECTION 16: FLOATING MESSAGE
-   ================================================== */
 
+/* ==================================================
+   SECTION 16: FLOATING MESSAGE / LETTER
+   ================================================== */
 
 .floating-message {
 
     /*
-       Use almost the entire available width
-       while keeping comfortable margins.
+       The letter is allowed to use almost the entire
+       iPhone screen, while still leaving comfortable
+       margins around it.
     */
 
     width:
         min(
-            calc(100vw - 40px),
-            540px
+            100%,
+            520px
         );
-
-
-    /*
-       Give the letter much more vertical space.
-    */
 
     max-height:
         calc(
-            100dvh -
-            env(safe-area-inset-top) -
-            env(safe-area-inset-bottom) -
-            60px
+            100dvh
+            - env(safe-area-inset-top)
+            - env(safe-area-inset-bottom)
+            - 80px
         );
 
 
     /*
-       If the letter is still longer than the
-       available screen, the user can scroll it.
+       IMPORTANT:
+
+       There is no visible box, border, or background.
+    */
+
+    background:
+        transparent;
+
+    padding:
+        10px 8px;
+
+
+    /*
+       This allows the letter to scroll on smaller
+       iPhone screens.
     */
 
     overflow-y:
@@ -745,35 +754,22 @@ body {
     overflow-x:
         hidden;
 
+
+    /*
+       Smooth scrolling on iPhone.
+    */
+
     -webkit-overflow-scrolling:
         touch;
 
 
     /*
-       Hide the scrollbar so it still looks like
-       floating text rather than a text box.
+       Hide the scrollbar so it feels like a
+       floating letter rather than a webpage.
     */
 
     scrollbar-width:
         none;
-
-    -ms-overflow-style:
-        none;
-
-
-    text-align:
-        center;
-
-    background:
-        transparent;
-
-
-    /*
-       Give the text some breathing room.
-    */
-
-    padding:
-        20px 10px;
 
 
     transform:
@@ -809,33 +805,65 @@ body {
 
 }
 
-.floating-message p {
 
-    margin:
-        0;
-       opacity:
+/* ==================================================
+   SECTION 17: LETTER APPEARANCE
+   ================================================== */
+
+.message-overlay.open
+.floating-message {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity:
         1;
 
+}
+
+
+/* ==================================================
+   SECTION 18: LETTER TEXT
+   ================================================== */
+
+.letter {
+
+    width:
+        100%;
+
+    padding:
+        5px 8px 25px 8px;
+
+}
+
+
+/* ==================================================
+   SECTION 19: LETTER PARAGRAPHS
+   ================================================== */
+
+.letter p {
+
+    margin:
+        0 0 24px 0;
 
     /*
-       Slightly smaller text allows considerably
-       more of the letter to fit on screen.
+       Responsive font size.
+
+       It becomes slightly smaller on narrow iPhones
+       and larger on bigger screens.
     */
 
     font-size:
         clamp(
-            14px,
-            3.8vw,
-            19px
+            15px,
+            4.2vw,
+            18px
         );
 
 
-    /*
-       Comfortable spacing between lines.
-    */
-
     line-height:
-        1.55;
+        1.65;
 
 
     font-weight:
@@ -844,6 +872,10 @@ body {
 
     letter-spacing:
         -0.01em;
+
+
+    text-align:
+        left;
 
 
     color:
@@ -855,43 +887,86 @@ body {
         );
 
 
-    /*
-       LEFT alignment makes a long personal letter
-       substantially easier to read.
-    */
-
-    text-align:
-        left;
-
-
-    /*
-       Make sure long words never push the text
-       outside the screen.
-    */
-
-    overflow-wrap:
-        break-word;
-
-    word-break:
-        normal;
-
-
-    /*
-       Soft appearance without creating a visible
-       text box.
-    */
-
     text-shadow:
-        0 2px 18px
+        0 1px 12px
         rgba(
             255,
             255,
             255,
-            0.8
+            0.65
         );
 
 }
 
+
+/* ==================================================
+   SECTION 20: LETTER SIGNATURE
+   ================================================== */
+
+.letter .letter-signoff {
+
+    margin-top:
+        32px;
+
+    margin-bottom:
+        10px;
+
+    text-align:
+        left;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* ==================================================
+   SECTION 21: VERY SMALL IPHONES
+   ================================================== */
+
+@media (max-width: 380px) {
+
+    .floating-message {
+
+        max-height:
+            calc(
+                100dvh
+                - env(safe-area-inset-top)
+                - env(safe-area-inset-bottom)
+                - 65px
+            );
+
+        padding:
+            5px 4px;
+
+    }
+
+
+    .letter {
+
+        padding:
+            5px
+            5px
+            20px
+            5px;
+
+    }
+
+
+    .letter p {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.58;
+
+        margin-bottom:
+            20px;
+
+    }
+
+}
 /* ==================================================
    SECTION 17: CLOSE BUTTON
    ================================================== */
