@@ -114,8 +114,6 @@ const messages = [
 
     "You're doing better than you realize.",
 
-    "It's okay. Just breathe for a moment.",
-
     "You are never a burden for needing a little care.",
 
     "There is no need to rush.",
@@ -144,6 +142,10 @@ const messages = [
     "째니 발",
 
     "Doma and I both got your back"
+
+   "바보 똥쟁이"
+
+"엉덩이 그만 만져요"
 
 ];
 
