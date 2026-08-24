@@ -706,10 +706,40 @@ body {
    SECTION 16: FLOATING MESSAGE
    ================================================== */
 
+
 .floating-message {
 
-    max-width:
-        520px;
+    /*
+       Keeps the letter from becoming too wide.
+    */
+
+    width:
+        min(
+            100%,
+            520px
+        );
+
+
+    /*
+       Prevents the letter from being taller than
+       the phone screen.
+    */
+
+    max-height:
+        75vh;
+
+
+    /*
+       If the letter is longer than the available
+       space, it can be gently scrolled.
+    */
+
+    overflow-y:
+        auto;
+
+    -webkit-overflow-scrolling:
+        touch;
+
 
     text-align:
         center;
@@ -717,8 +747,15 @@ body {
     background:
         transparent;
 
+
+    /*
+       Small horizontal padding so the text has
+       breathing room without creating a box.
+    */
+
     padding:
-        20px;
+        20px 10px;
+
 
     transform:
         translateY(15px)
@@ -726,6 +763,7 @@ body {
 
     opacity:
         0;
+
 
     transition:
         transform 0.55s
@@ -740,40 +778,30 @@ body {
 
 }
 
-
-.message-overlay.open
-.floating-message {
-
-    transform:
-        translateY(0)
-        scale(1);
-
-    opacity:
-        1;
-
-}
-
-
 .floating-message p {
 
-    margin:
-        0;
+    margin: 0;
+
+    /*
+       Smaller font so the full letter can fit
+       comfortably on a phone screen.
+    */
 
     font-size:
         clamp(
-            28px,
-            8vw,
-            52px
+            15px,
+            4.1vw,
+            20px
         );
 
     line-height:
-        1.25;
+        1.55;
 
     font-weight:
-        500;
+        400;
 
     letter-spacing:
-        -0.025em;
+        -0.01em;
 
     color:
         rgba(
@@ -782,6 +810,23 @@ body {
             56,
             0.92
         );
+
+    text-align:
+        left;
+
+    /*
+       Allows long words/lines to wrap naturally.
+    */
+
+    overflow-wrap:
+        break-word;
+
+    word-wrap:
+        break-word;
+
+    /*
+       Soft text appearance.
+    */
 
     text-shadow:
         0 2px 18px
@@ -793,7 +838,6 @@ body {
         );
 
 }
-
 
 /* ==================================================
    SECTION 17: CLOSE BUTTON
