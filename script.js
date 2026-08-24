@@ -130,6 +130,18 @@ const messages = [
 
     "You deserve a peaceful moment.",
 
+   "Text me anytime",
+
+   "Call me anytime",
+
+   "Text me anytime",
+
+   "Call me anytime",
+
+   "Text me anytime",
+
+   "Call me anytime",
+
 
     /* ==================================================
        YOUR PERSONAL MESSAGES
@@ -218,6 +230,11 @@ const messages = [
 "누나 언제 돌아와요",
 
 "도마가 보고싶데요",
+
+       "힘들면 언제든 연락해요",
+       "힘들면 언제든 연락해요",
+       "힘들면 언제든 연락해요",
+       "힘들면 언제든 연락해요",
 ];
 
 
