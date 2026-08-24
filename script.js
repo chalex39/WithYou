@@ -21,7 +21,7 @@ const messages = [
 
     "I'm always rooting for you",
 
-    "You make my world a little brighter",
+    "You make my world brighter",
 
     "It's okay to take things one step at a time",
 
@@ -604,7 +604,7 @@ squishy.addEventListener(
 
 
         instruction.textContent =
-            "keep playing ♡";
+            "Relax";
 
     }
 );
