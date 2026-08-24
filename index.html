@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==================================================
+         SECTION 1: BASIC WEBSITE INFORMATION
+         ================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no,
+                   viewport-fit=cover">
+
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent">
+
+    <meta name="theme-color"
+          content="#fff1f5">
+
+    <title>A Little Something For You</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         SECTION 2: MAIN UI
+         ================================================== -->
+
+    <main class="page">
+
+        <div class="content">
+
+            <!-- ==================================================
+                 SECTION 3: SMALL INTRODUCTION
+                 ================================================== -->
+
+            <p class="subtitle">
+                a little something for you
+            </p>
+
+
+            <!-- ==================================================
+                 SECTION 4: ENCOURAGEMENT MESSAGE
+                 ================================================== -->
+
+            <h1 id="message">
+                You are doing great.
+            </h1>
+
+
+            <!-- ==================================================
+                 SECTION 5: SQUISHY
+                 ================================================== -->
+
+            <div class="squishy-area">
+
+                <div
+                    id="squishy"
+                    class="squishy"
+                    aria-label="Interactive squishy toy"
+                >
+
+                    <div class="squishy-highlight"></div>
+
+                    <div class="squishy-highlight-small"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 SECTION 6: INSTRUCTION
+                 ================================================== -->
+
+            <p id="instruction"
+               class="instruction">
+
+                press &amp; move me
+
+            </p>
+
+
+            <!-- ==================================================
+                 SECTION 7: HEART BUTTON
+                 ================================================== -->
+
+            <button
+                id="heartButton"
+                class="heart-button"
+                aria-label="Open your message"
+                type="button"
+            >
+
+                <span class="heart-shape">
+                    ♥
+                </span>
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================================================
+         SECTION 8: MESSAGE OVERLAY
+         ================================================== -->
+
+    <div
+        id="messageOverlay"
+        class="message-overlay"
+        aria-hidden="true"
+    >
+
+        <button
+            id="closeButton"
+            class="close-button"
+            aria-label="Close message"
+            type="button"
+        >
+            ×
+        </button>
+
+
+        <!-- ==================================================
+             SECTION 9: CUSTOM LETTER / MESSAGE
+
+             Replace "text" with your actual message later.
+             ================================================== -->
+
+        <div class="floating-message">
+
+            <p>
+                text
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         SECTION 10: JAVASCRIPT
+         ================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
