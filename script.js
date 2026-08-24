@@ -527,7 +527,7 @@ squishy.addEventListener(
 
 
         instruction.textContent =
-            "keep playing ♡";
+            "keep squishing";
 
     }
 );
