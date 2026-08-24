@@ -659,7 +659,7 @@ body {
         40px;
 
     opacity:
-        0;
+        1;
 
     visibility:
         hidden;
@@ -762,7 +762,7 @@ body {
         scale(0.96);
 
     opacity:
-        0;
+        1;
 
 
     transition:
